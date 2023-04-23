@@ -49,7 +49,7 @@ jobs:
             -DCMAKE_BUILD_TYPE=Release ^
             -DBUILD_SHARED_LIBS=OFF ^
             -DEDYN_DISABLE_ASSERT=OFF ^
-            -DEnTT_DIR="%CD_LINUX%/entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0.zip/lib/EnTT/cmake" ^
+            -DEnTT_DIR="%CD_LINUX%/entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0/lib/EnTT/cmake" ^
             -DCMAKE_INSTALL_PREFIX="cmake-build/${{ env.cmakeInstallationPath }}" -B./cmake-build &&^
             cd cmake-build && cmake --build . && cmake --install . 
             
