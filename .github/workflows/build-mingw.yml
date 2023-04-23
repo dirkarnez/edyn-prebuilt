@@ -32,8 +32,8 @@ jobs:
       - name: curl entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0.zip
         shell: cmd
         run: |
-          curl https://github.com/dirkarnez/entt-prebuilt/releases/download/v3.11.1/entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0.zip -L -O -J &&^
-          7z.exe x entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0.zip -o"entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0"
+          curl https://github.com/dirkarnez/entt-prebuilt/releases/download/v3.11.1/entt-v3.10.3-mingw64-x86_64-posix-seh-rev0-8.1.0.zip -L -O -J &&^
+          7z.exe x entt-v3.10.3-mingw64-x86_64-posix-seh-rev0-8.1.0.zip -o"entt-v3.10.3-mingw64-x86_64-posix-seh-rev0-8.1.0"
           
       - name: set PATH, check mingw version, cmake generate, build and install
         shell: cmd
@@ -49,7 +49,7 @@ jobs:
             -DCMAKE_BUILD_TYPE=Release ^
             -DBUILD_SHARED_LIBS=OFF ^
             -DEDYN_DISABLE_ASSERT=OFF ^
-            -DEnTT_DIR="%CD_LINUX%/entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0/lib/EnTT/cmake" ^
+            -DEnTT_DIR="%CD_LINUX%/entt-v3.10.3-mingw64-x86_64-posix-seh-rev0-8.1.0/lib/EnTT/cmake" ^
             -DCMAKE_INSTALL_PREFIX="cmake-build/${{ env.cmakeInstallationPath }}" -B./cmake-build &&^
             cd cmake-build && cmake --build . && cmake --install . 
             
