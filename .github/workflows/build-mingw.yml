@@ -29,7 +29,7 @@ jobs:
         run: cd /d ${{ github.workspace }} && curl https://github.com/Kitware/CMake/releases/download/v3.24.0/cmake-3.24.0-windows-x86_64.zip -L --output cmake-3.24.0-windows-x86_64.zip && dir && 7z.exe x cmake-3.24.0-windows-x86_64.zip
         
         
-      - name: curl entt-v3.11.1-mingw64-x86_64-posix-seh-rev0-8.1.0.zip
+      - name: curl entt-v3.10.3-mingw64-x86_64-posix-seh-rev0-8.1.0.zip
         shell: cmd
         run: |
           curl https://github.com/dirkarnez/entt-prebuilt/releases/download/v3.10.3/entt-v3.10.3-mingw64-x86_64-posix-seh-rev0-8.1.0.zip -L -O -J &&^
